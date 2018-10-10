@@ -1,0 +1,29 @@
+SIMPLE ENCRYPTION AND DECRYPTION
+concept---from A to Z we just increment or decrement the position for encoding and decoding respectivly.like for 'A' we decode it as 'C' with incrementing its position by 2.
+	--for example -if formula used is i+2 than 'hello' is encoded as 'jgnnq'
+
+What we do is make the user input a message
+That message contains-
+			1.upper case or lower case keywords(like 'hello' or 'HELLO')
+			2.all the symbols (!,@,#..)
+			3.spaces between words in the input message('hello world')
+			
+step1-we make the input message lower case as python is case senstive language "a" and "A" are diffrent
+step2-we tokenize the message and store them in list
+step3-encrption-
+		we first make  four group that contain diffrent charaters-
+									-1st group contains !@#$...(in my code it is space)
+									-three groups contains a to z alphabtes(in my code it is alpha 1, alpha2, alpha 3)
+		now we start a loop of range of length of tokenised message
+									-this loop will find current character in alpha 1/alpha 2/alpha 3/space
+									-and correspondingly encode that characcter according to the formula aplied
+									-all the space character are first appended to a list key and then encoded as '?' so that while decoding key list is used to generate correct character
+									-return tokenised encoded message and key
+		now the encoded message genrated is concatenated and we get encoded messgae
+
+step 4-decryption-
+		loop is started of range length of encoded message-
+								-decoded according to formula(these formula are generally opposite to encoding ..in encoding if it is i+1 than in decoding it is i-1)   
+								-key is used to decode all the '?' correspondigly
+								-return tokenised decoded message
+		now tokenised decoded message is conatenated
