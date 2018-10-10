@@ -81,16 +81,16 @@ alpha1=list('aehlouvx')
 alpha2=list('cfkmqrtwz')
 alpha3=list('bdgijnpsy')
 space=list('!@#$%^&*()_+1234567890-=<>?:"{}|,./;[]'+' ')
-imsg=input('enter your message')
-omsg=imsg.lower()
-tmsg=tokenize(omsg)
-emsg=[]
-dmsg=[]
+imsg=input('enter your message')#input message
+omsg=imsg.lower()#lower case message
+tmsg=tokenize(omsg)#tokenised message
+emsg=[]#encrypted message
+dmsg=[]#decrypted message
 key=[]
 emsg,key=encryption(tmsg)
-xmsg=newmsg(emsg)
+xmsg=newmsg(emsg)#concatenated encoded msg
 print('encrypted msg: ',xmsg)
 dmsg=decryption(xmsg)
-originalmsg=newmsg(dmsg)
+originalmsg=newmsg(dmsg)#concatenatd decrypted msg
 print('decryption msg:',originalmsg)
 
