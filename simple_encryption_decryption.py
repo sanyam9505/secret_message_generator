@@ -44,9 +44,9 @@ def decryption(xmsg):
             dmsg.append('o')
         elif(xmsg[i] in alpha1):
              if(tmsg[i]=='v'):
-                dmsg.append(alpha1[7])
+                dmsg.append(alpha1[6])
              elif(tmsg[i]=='x'):
-                 dmsg.append(alpha1[6])
+                 dmsg.append(alpha1[7])
              elif(tmsg[i]!='v' and tmsg[i]!='x'):
                  iia=alpha1.index(xmsg[i])#iia=i in alpha
                  newi=iia-2
