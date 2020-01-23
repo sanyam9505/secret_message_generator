@@ -1,4 +1,4 @@
-
+"now push it"
 def tokenize(omsg):
     tmsg=list(omsg)
     return tmsg
